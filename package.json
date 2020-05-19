@@ -1,6 +1,6 @@
 {
   "name": "vue-letter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Display e-mail messages in your Vue projects.",
   "main": "dist/Letter.umd.js",
   "module": "dist/Letter.esm.js",
