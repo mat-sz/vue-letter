@@ -51,7 +51,7 @@
   },
   "homepage": "https://github.com/mat-sz/vue-letter",
   "dependencies": {
-    "react-letter": "^0.2.2"
+    "react-letter": "^0.2.5"
   },
   "author": "Mat Sz <contact@matsz.dev>",
   "license": "BSD-3-Clause-Clear",
