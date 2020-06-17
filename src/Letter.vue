@@ -1,6 +1,10 @@
 <template>
   <div v-if="!useIframe" v-bind:class="[className]" v-html="sanitizedHtml" />
-  <iframe v-if="useIframe" v-bind:class="[className]" v-bind:src="iframeSrc" />
+  <iframe
+    v-else-if="useIframe"
+    v-bind:class="[className]"
+    v-bind:src="iframeSrc"
+  />
 </template>
 
 <script>
