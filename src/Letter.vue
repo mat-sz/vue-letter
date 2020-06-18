@@ -18,12 +18,14 @@ export default {
     iframeTitle: String,
     rewriteExternalLinks: Function,
     rewriteExternalResources: Function,
+    allowedSchemas: Array,
   },
   computed: {
     sanitizerOptions: function () {
       const options = {
-        rewriteExternalLinks: this.rewriteExternalLinks,
         rewriteExternalResources: this.rewriteExternalResources,
+        rewriteExternalLinks: this.rewriteExternalLinks,
+        allowedSchemas: this.allowedSchemas,
       };
     },
     sanitizedHtml: function () {

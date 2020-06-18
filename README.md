@@ -27,7 +27,7 @@ export default {
 
 ## Attributes
 
-Not all [react-letter](https://github.com/mat-sz/react-letter) properties are supported.
+All [react-letter](https://github.com/mat-sz/react-letter) properties are supported.
 
 | Attribute                | Type                       | Description                                                                                                  |
 | ------------------------ | -------------------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -38,3 +38,4 @@ Not all [react-letter](https://github.com/mat-sz/react-letter) properties are su
 | iframeTitle              | String                     | Iframe title, usually set to subject of the message.                                                         |
 | rewriteExternalResources | Function(string) => string | The result of this function will be used to rewrite the URLs for url(...) in CSS and src attributes in HTML. |
 | rewriteExternalLinks     | Function(string) => string | The result of this function will be used to rewrite the URLs for href attributes in HTML.                    |
+| allowedSchemas           | String[]                   | List of allowed URL schemas. Default: ['http', 'https', 'mailto'].                                           |
