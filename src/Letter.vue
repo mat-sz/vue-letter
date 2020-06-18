@@ -1,9 +1,10 @@
 <template>
-  <div v-if="!useIframe" v-bind:class="[className]" v-html="sanitizedHtml" />
+  <div v-if="!useIframe" :class="[className]" v-html="sanitizedHtml" />
   <iframe
     v-else-if="useIframe"
-    v-bind:class="[className]"
-    v-bind:src="iframeSrc"
+    :class="[className]"
+    :src="iframeSrc"
+    :title="iframeTitle"
   />
 </template>
 
@@ -17,6 +18,7 @@ export default {
     html: String,
     text: String,
     useIframe: Boolean,
+    iframeTitle: String,
   },
   computed: {
     sanitizedHtml: function () {

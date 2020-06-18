@@ -29,9 +29,10 @@ export default {
 
 Not all [react-letter](https://github.com/mat-sz/react-letter) properties are supported.
 
-| Attribute | Type    | Description                                                              |
-| --------- | ------- | ------------------------------------------------------------------------ |
-| className | String  | CSS class to be used on the main element (div or iframe).                |
-| html      | String  | Unsanitized e-mail HTML contents.                                        |
-| text      | String  | Unsanitized e-mail text contents (fallback if html is not set or empty). |
-| useIframe | Boolean | Should iframe be used in place of div. Default: false.                   |
+| Attribute   | Type    | Description                                                              |
+| ----------- | ------- | ------------------------------------------------------------------------ |
+| className   | String  | Class name of the wrapper div.                                           |
+| html        | String  | Unsanitized e-mail HTML contents.                                        |
+| text        | String  | Unsanitized e-mail text contents (fallback if html is not set or empty). |
+| useIframe   | Boolean | Should the HTML be wrapped in an iframe. Default: false.                 |
+| iframeTitle | String  | Iframe title, usually set to subject of the message.                     |
