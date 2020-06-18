@@ -29,10 +29,12 @@ export default {
 
 Not all [react-letter](https://github.com/mat-sz/react-letter) properties are supported.
 
-| Attribute   | Type    | Description                                                              |
-| ----------- | ------- | ------------------------------------------------------------------------ |
-| className   | String  | Class name of the wrapper div.                                           |
-| html        | String  | Unsanitized e-mail HTML contents.                                        |
-| text        | String  | Unsanitized e-mail text contents (fallback if html is not set or empty). |
-| useIframe   | Boolean | Should the HTML be wrapped in an iframe. Default: false.                 |
-| iframeTitle | String  | Iframe title, usually set to subject of the message.                     |
+| Attribute                | Type                       | Description                                                                                                  |
+| ------------------------ | -------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| className                | String                     | Class name of the wrapper div.                                                                               |
+| html                     | String                     | Unsanitized e-mail HTML contents.                                                                            |
+| text                     | String                     | Unsanitized e-mail text contents (fallback if html is not set or empty).                                     |
+| useIframe                | Boolean                    | Should the HTML be wrapped in an iframe. Default: false.                                                     |
+| iframeTitle              | String                     | Iframe title, usually set to subject of the message.                                                         |
+| rewriteExternalResources | Function(string) => string | The result of this function will be used to rewrite the URLs for url(...) in CSS and src attributes in HTML. |
+| rewriteExternalLinks     | Function(string) => string | The result of this function will be used to rewrite the URLs for href attributes in HTML.                    |

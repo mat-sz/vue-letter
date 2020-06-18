@@ -16,10 +16,18 @@ export default {
     text: String,
     useIframe: Boolean,
     iframeTitle: String,
+    rewriteExternalLinks: Function,
+    rewriteExternalResources: Function,
   },
   computed: {
+    sanitizerOptions: function () {
+      const options = {
+        rewriteExternalLinks: this.rewriteExternalLinks,
+        rewriteExternalResources: this.rewriteExternalResources,
+      };
+    },
     sanitizedHtml: function () {
-      return sanitize(this.html, this.text);
+      return sanitize(this.html, this.text, this.sanitizerOptions);
     },
     iframeSrc: function () {
       return (
