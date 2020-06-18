@@ -1,11 +1,8 @@
 <template>
   <div v-if="!useIframe" :class="[className]" v-html="sanitizedHtml" />
-  <iframe
-    v-else-if="useIframe"
-    :class="[className]"
-    :src="iframeSrc"
-    :title="iframeTitle"
-  />
+  <div v-else-if="useIframe" :class="[className]">
+    <iframe :src="iframeSrc" :title="iframeTitle" />
+  </div>
 </template>
 
 <script>
