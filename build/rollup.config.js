@@ -3,6 +3,7 @@ import vue from 'rollup-plugin-vue';
 import buble from '@rollup/plugin-buble';
 import resolve from '@rollup/plugin-node-resolve';
 import ignore from 'rollup-plugin-ignore';
+import typescript from '@rollup/plugin-typescript';
 
 export default {
   input: 'src/wrapper.js',
@@ -10,14 +11,34 @@ export default {
     name: 'Letter',
     exports: 'named',
   },
+  onwarn: function (warning) {
+    // Suppress this error message... there are hundreds of them. Angular team says to ignore it.
+    // https://github.com/rollup/rollup/wiki/Troubleshooting#this-is-undefined
+    if (
+      /The 'this' keyword is equivalent to 'undefined' at the top level of an ES module, and has been rewritten/.test(
+        warning.message
+      )
+    ) {
+      return;
+    }
+
+    console.warn(warning.message);
+  },
   plugins: [
-    ignore('react'),
+    ignore(['react']),
     commonjs(),
     vue({
       css: true,
       compileTemplate: true,
     }),
-    resolve(),
-    buble(),
+    typescript(),
+    resolve({
+      resolveOnly: ['react-letter', /\.(.*?)/],
+    }),
+    buble({
+      transforms: {
+        generator: false,
+      },
+    }),
   ],
 };
