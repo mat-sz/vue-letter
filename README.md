@@ -39,3 +39,4 @@ All [react-letter](https://github.com/mat-sz/react-letter) properties are suppor
 | rewriteExternalResources | Function(string) => string | The result of this function will be used to rewrite the URLs for url(...) in CSS and src attributes in HTML. |
 | rewriteExternalLinks     | Function(string) => string | The result of this function will be used to rewrite the URLs for href attributes in HTML.                    |
 | allowedSchemas           | String[]                   | List of allowed URL schemas. Default: ['http', 'https', 'mailto'].                                           |
+| preserveCssPriority      | Boolean                    | Preserves CSS priority (!important). Default: true.                                                          |

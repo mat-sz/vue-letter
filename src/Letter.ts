@@ -14,6 +14,7 @@ interface ILetter extends Vue {
   sanitizerOptions: SanitizerOptions;
   sanitizedHtml: string;
   iframeSrc: string;
+  preserveCssPriority: boolean;
 }
 
 export default (Vue as VueConstructor<ILetter>).extend({
@@ -27,6 +28,7 @@ export default (Vue as VueConstructor<ILetter>).extend({
     rewriteExternalLinks: Function as PropType<(url: string) => string>,
     rewriteExternalResources: Function as PropType<(url: string) => string>,
     allowedSchemas: Array as PropType<string[]>,
+    preserveCssPriority: Boolean,
   },
   computed: {
     sanitizerOptions: function (): SanitizerOptions {
@@ -34,6 +36,7 @@ export default (Vue as VueConstructor<ILetter>).extend({
         rewriteExternalResources: this.rewriteExternalResources,
         rewriteExternalLinks: this.rewriteExternalLinks,
         allowedSchemas: this.allowedSchemas,
+        preserveCssPriority: this.preserveCssPriority,
       };
     },
     sanitizedHtml: function (): string {
