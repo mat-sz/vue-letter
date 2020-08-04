@@ -1789,10 +1789,10 @@ react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-letter@^0.2.5:
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/react-letter/-/react-letter-0.2.5.tgz#42f0586cbf211b0c902461e713d7becacaf16154"
-  integrity sha512-0Atb8XLp2kVjLkeNQbWX5cilBCPuvi+lSPYcHrYTWp4g5P0dCYX0ISRZS3d0DnswFOfv1jxg3Vu/9wbTo32cTw==
+react-letter@^0.2.6:
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/react-letter/-/react-letter-0.2.6.tgz#acb03599c0e509b3690adbf1a16fd3c0d3e5a80f"
+  integrity sha512-GXqaz9ytXSmHQw6qm5LvK/gk5vH8w/rE+QbB+e8zoaqaXOl+I4zO9IDB3ah/tjbzl5HBtvTok+/zH1hyFepuHQ==
 
 react@^16.13.1:
   version "16.13.1"
