@@ -6,7 +6,7 @@ Available in [NPM](https://npmjs.com/package/vue-letter), can be installed with 
 
 ## Usage
 
-```
+```html
 <template>
   <div id="app">
     <Letter html="<script>test</script> hello <h1>world</h1>" />
@@ -14,14 +14,14 @@ Available in [NPM](https://npmjs.com/package/vue-letter), can be installed with 
 </template>
 
 <script>
-import Letter from "react-letter";
+  import Letter from 'vue-letter';
 
-export default {
-  name: "App",
-  components: {
-    Letter,
-  },
-};
+  export default {
+    name: 'App',
+    components: {
+      Letter,
+    },
+  };
 </script>
 ```
 
