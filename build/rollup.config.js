@@ -31,11 +31,12 @@ export default {
     }),
     typescript(),
     resolve({
-      resolveOnly: ['react-letter', /\.(.*?)/],
+      resolveOnly: ['lettersanitizer', /\.(.*?)/],
     }),
     buble({
       transforms: {
         generator: false,
+        dangerousForOf: true,
       },
     }),
   ],
