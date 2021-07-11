@@ -5,6 +5,7 @@
   "main": "dist/Letter.umd.js",
   "module": "dist/Letter.esm.js",
   "unpkg": "dist/Letter.min.js",
+  "types": "Letter.d.ts",
   "browser": {
     "./sfc": "src/Letter.vue"
   },

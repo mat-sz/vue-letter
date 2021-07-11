@@ -1,6 +1,5 @@
-import Vue, { PropType } from 'vue';
+import Vue, { PropType, VueConstructor } from 'vue';
 import { sanitize, SanitizerOptions } from 'react-letter';
-import { VueConstructor } from 'vue/types/umd';
 
 interface ILetter extends Vue {
   className: string;
