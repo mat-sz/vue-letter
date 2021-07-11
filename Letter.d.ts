@@ -1,5 +1,5 @@
 import Vue, { VueConstructor } from 'vue';
-import { SanitizerOptions } from 'react-letter';
+import { SanitizerOptions } from 'lettersanitizer';
 
 interface ILetter extends Vue {
   className: string;
