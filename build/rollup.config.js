@@ -2,7 +2,6 @@ import commonjs from '@rollup/plugin-commonjs';
 import vue from 'rollup-plugin-vue';
 import buble from '@rollup/plugin-buble';
 import resolve from '@rollup/plugin-node-resolve';
-import ignore from 'rollup-plugin-ignore';
 import typescript from '@rollup/plugin-typescript';
 
 export default {
@@ -25,7 +24,6 @@ export default {
     console.warn(warning.message);
   },
   plugins: [
-    ignore(['react']),
     commonjs(),
     vue({
       css: true,

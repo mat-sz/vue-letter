@@ -1896,11 +1896,6 @@ right-align@^0.1.1:
   dependencies:
     align-text "^0.1.1"
 
-rollup-plugin-ignore@^1.0.5:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-ignore/-/rollup-plugin-ignore-1.0.6.tgz#6dd7f390a0f0c9de37ddc8b28078437c792589fb"
-  integrity sha512-OC9h/VMWcOJBwtHxLCaYeuGhqlOWTaE0/S1u5BZqxR8KB+0SjvCRPoHNMdCZQ3c3yVPWFOB2GM49atg2RvGicQ==
-
 rollup-plugin-vue@^5.0.1:
   version "5.1.9"
   resolved "https://registry.yarnpkg.com/rollup-plugin-vue/-/rollup-plugin-vue-5.1.9.tgz#8769cfdac5531c2d1970222b7887b883db37b866"

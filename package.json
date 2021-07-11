@@ -38,7 +38,6 @@
     "lint-staged": "^10.1.7",
     "prettier": "^2.0.5",
     "rollup": "^1.17.0",
-    "rollup-plugin-ignore": "^1.0.5",
     "rollup-plugin-vue": "^5.0.1",
     "typescript": "^3.9.5",
     "vue": "^2.6.10",
