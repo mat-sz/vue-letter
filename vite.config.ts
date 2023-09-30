@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
-import typescript from '@rollup/plugin-typescript';
+import typescript2 from 'rollup-plugin-typescript2';
+import dts from 'vite-plugin-dts';
 import vue from '@vitejs/plugin-vue';
 
 // https://vitejs.dev/config/
@@ -7,23 +8,36 @@ export default defineConfig(() => ({
   build: {
     lib: {
       name: 'vue-letter',
-      entry: 'src/Letter.vue',
+      entry: 'src/main.ts',
       formats: ['es', 'cjs', 'umd'] as any,
     },
     rollupOptions: {
       output: {
-        assetFileNames: assetInfo => {
-          return assetInfo.name === 'style.css' ? 'index.css' : assetInfo.name!;
+        exports: 'named' as any,
+        globals: {
+          vue: 'Vue',
         },
       },
-      external: ['vue', 'lettersanitizer'],
+      external: ['vue'],
     },
   },
   plugins: [
-    {
-      ...typescript(),
-      apply: 'build',
-    } as any,
     vue(),
+    dts({
+      insertTypesEntry: true,
+    }),
+    typescript2({
+      check: false,
+      include: ['src/**/*.vue'],
+      tsconfigOverride: {
+        compilerOptions: {
+          outDir: 'dist',
+          sourceMap: true,
+          declaration: true,
+          declarationMap: true,
+        },
+      },
+      exclude: ['vite.config.ts'],
+    }),
   ],
 }));

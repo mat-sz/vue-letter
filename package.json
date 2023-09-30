@@ -4,19 +4,22 @@
   "description": "Display e-mail messages in your Vue projects.",
   "main": "dist/vue-letter.umd.cjs",
   "module": "dist/vue-letter.js",
-  "types": "dist/Letter.d.ts",
+  "types": "dist/main.d.ts",
+  "files": [
+    "dist"
+  ],
   "browser": {
     "./sfc": "src/Letter.vue"
   },
   "exports": {
     ".": {
-      "require": "./dist/vue-letter.cjs",
+      "require": "./dist/vue-letter.umd.cjs",
       "import": "./dist/vue-letter.js",
-      "types": "./dist/Letter.d.ts"
+      "types": "./dist/main.d.ts"
     }
   },
   "type": "module",
-  "typings": "dist/Letter.d.ts",
+  "typings": "dist/main.d.ts",
   "scripts": {
     "prepare": "npm run build",
     "build": "vite build"
@@ -35,14 +38,14 @@
     ]
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "^11.1.4",
     "@vitejs/plugin-vue": "^4.3.4",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "prettier": "^3.0.3",
-    "tslib": "^2.6.2",
+    "rollup-plugin-typescript2": "^0.36.0",
     "typescript": "^5.2.2",
     "vite": "^4.4.9",
+    "vite-plugin-dts": "^3.6.0",
     "vue": "^3.3.4"
   },
   "repository": {
@@ -54,7 +57,7 @@
   },
   "homepage": "https://github.com/mat-sz/vue-letter",
   "dependencies": {
-    "lettersanitizer": "^1.0.0"
+    "lettersanitizer": "^1.0.5"
   },
   "author": "Mat Sz <contact@matsz.dev>",
   "license": "BSD-3-Clause-Clear",
