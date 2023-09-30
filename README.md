@@ -1,4 +1,14 @@
-# vue-letter
+<h1 align="center">
+vue-letter
+</h1>
+
+<p align="center">
+<a href="https://npmjs.com/package/vue-letter">
+<img alt="npm" src="https://img.shields.io/npm/v/vue-letter">
+<img alt="npm" src="https://img.shields.io/npm/dw/vue-letter">
+<img alt="NPM" src="https://img.shields.io/npm/l/vue-letter">
+</a>
+</p>
 
 Vue.js port of [react-letter](https://github.com/mat-sz/react-letter).
 
@@ -7,22 +17,15 @@ Available in [NPM](https://npmjs.com/package/vue-letter), can be installed with 
 ## Usage
 
 ```html
+<script setup>
+  import { Letter } from 'vue-letter';
+</script>
+
 <template>
   <div id="app">
     <Letter html="<script>test</script> hello <h1>world</h1>" />
   </div>
 </template>
-
-<script>
-  import Letter from 'vue-letter';
-
-  export default {
-    name: 'App',
-    components: {
-      Letter,
-    },
-  };
-</script>
 ```
 
 ## Attributes
