@@ -7,3 +7,4 @@ yarn.lock
 tsconfig.json
 logo.png
 build
+vite.config.ts
