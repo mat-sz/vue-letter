@@ -10,6 +10,7 @@ interface Props {
   iframeTitle: string;
   rewriteExternalLinks: (url: string) => string;
   rewriteExternalResources: (url: string) => string;
+  allowedCssProperties: string[];
   allowedSchemas: string[];
   preserveCssPriority: boolean;
 }
@@ -25,6 +26,7 @@ const {
   rewriteExternalLinks,
   rewriteExternalResources,
   allowedSchemas,
+  allowedCssProperties,
   preserveCssPriority,
 } = reactive(props);
 
@@ -33,6 +35,7 @@ const sanitizerOptions = {
   rewriteExternalLinks,
   allowedSchemas,
   preserveCssPriority,
+  allowedCssProperties,
 };
 
 const sanitizedHtml = sanitize(html, text, sanitizerOptions);
