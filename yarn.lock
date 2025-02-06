@@ -704,7 +704,7 @@ kolorist@^1.8.0:
   resolved "https://registry.yarnpkg.com/kolorist/-/kolorist-1.8.0.tgz#edddbbbc7894bc13302cdf740af6374d4a04743c"
   integrity sha512-Y+60/zizpJ3HRH8DCss+q95yr6145JXZo46OTpFvDZWLfRCE4qChOyk1b26nMaNpfHHgxagk9dXT5OP0Tfe+dQ==
 
-lettersanitizer@^1.0.5:
+lettersanitizer@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/lettersanitizer/-/lettersanitizer-1.0.6.tgz#d56df4c150bfe2a7edd9c6c5ce99f23aba2a23e4"
   integrity sha512-2vj0tUtBRjlmTCFsgVlFmfi04p049Zwv/4eBGWBUOKropEoL+q+jTQQfFyDu50j7gL76pycMvrqD0uV0vxX2zg==
